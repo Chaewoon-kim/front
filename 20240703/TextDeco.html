@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트꾸미기</title>
+    <style>
+        body{
+            font-family: sans-serif, cursive;
+            font-weight: 400;
+            font-style: normal;
+            background-color: mistyrose;
+        }
+        h3{
+            text-align: left;
+        }
+        span{
+            text-decoration: line-through;
+        }
+        b{
+            text-decoration: overline;
+        }
+        p{
+            color:blue;
+        }
+        .p1{
+            text-indent: 3em;
+            /*글자 들여쓰기*/
+            text-align: justify;
+            /*글자크기 단위*/
+            font-size: 2em;
+            color:orange; /*body 영역에 색깔이 정해져 있지만 스타일의 중첩 우선순위가 높기 때문에 덮어쓸 수 있음*/
+        }
+        .p2{
+            text-indent: 1em;
+            text-align: center;
+            border:1px solid red;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <h3>텍스트 꾸미기</h3>
+    <p class = "p1">
+        HTML의 태그만으로 기존의 워드 프로세서와 같이 들여쓰기, 정렬 공백, 간격 등과 세밀한 <span>텍스트 제어</span>를 할 수 없다
+    </p>
+    <p class = "p2" style="color:aqua;">그러나 <b>스타일 시트</b>는 이를 가능하게 한다</p>
+    <a href="htttp://www.naver.com" target="_blank">밑줄이 없는 네이버 링크</a>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html> <!---HTML5 정의/선언문-->
+<html lang="ko"><!--언어 설정 (en = english, ko = korean)-->
+<head> 
+    <meta charset="UTF-8"><!--문자셋: 한글이 깨지지 않게 인코딩-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>예제 2-9 텍스트 꾸미기</title> <!--웹문서의 제목 정의 : 검색 엔진의 최적화-->
+</head>
+<body> <!--화면에 보여지는 내용-->
+    <h3>텍스트 꾸미기</h3>
+    <hr><!--화면에 줄을 그림-->
+    <p><!--단락을 나타내는 태그-->
+        <b>진하게</b><br> <!--br태그는 줄 바꿈-->
+        <strong>중요한 부분</strong><br>
+        <em>강조</em><br>
+        <i>이탤릭체로 강조</i><br>
+        <b><i>진하게 이탤릭체로 강조</i></b><br>
+        보통문자 <small>한 단계 작은 문자</small><br>
+        <del>삭제</del><!--글자 중간에 삭제된 것처럼 줄이 그어짐--><br>
+        <ins>추가</ins><!--글자 밑에 라인--><br>
+        보통문자의 <sup>윗첨자</sup> <br>
+        보통문자의 <sub>아래첨자</sub><br>
+        <mark>하이라이팅</mark><br><!--글자에 하이라이트가 쳐지게 끔 하는 태그-->
+    </p>
+
+    <!--예제 문제 시작-->
+    <h1 title = "예제 2-9번 문제">웹사이트의 모습을 기술하기 위한 마크업 언어.</h1>
+    <p>프로그래밍 언어가 아니라 <b>마크업 정보</b>를 표현하는 <b>마크업 언어</b>로 문서의 내용 이외의 문서라는 뜻이다. 
+        <em>중요한 내용을 담고 있는 em태그</em>
+        <i>단순히 이탤릭체로 표시</i>
+    </p>
+    <p>
+        웹의 창시자인 팀 버너스 리 " 웹의 힘은 보편성에 있다. 장애에 구애없이 모든 사람이 접근할 수 있는 것이 필수 요소이다. "
+        라는 말로 웹 접근성을 설명한다.
+    </p>
+    <p>
+        루비(Ruby)는 1995년 일본의 프로그래머인 마츠모토 유키히로가 만든 프로그래밍 언어입니다.
+    </p>
+    <!--ruby태그와 rt태그 : 일본어의 후리가나와 같이 해당 문자의 발음이나 설명을 [작은 크기의 윗첨자]로 알려주는 루비 주석-->
+    <ruby>윗주<rt>ruby</rt></ruby> 윗주 (루비 ruby)사용 <ruby>아래글자<rt>윗글자</rt></ruby> <br><br>
+    <sup>위 첨자</sup>와 <sub>아래첨자</sub>를 표시해 봅니다.78쪽
+    </p>
+
+    <p>
+        <!--abbr 태그: IOT와 같이 축약형(abbrevation)이나 머리글자로 된 단어를 정의할 때 사용-->
+        <strong><abbr title = "Internet of Things">IOT</abbr></strong>란 각종 사물에 센서....
+    </p>
+    <p>내가 경험한 <cite>'비포선셋'</cite>중</p>
+
+    <!--이미지 확장자 설명 -->
+    <img src="../images/루피.jpg" alt="이미지가 손상됐을 때 대체할 텍스트" width="150px">
+
+    <!--
+        GIF : 표시할 수 있는 색상 수가 최대 256가지이지만, 다른 이미지 파일 형식에 비해 작다.
+        아이콘, 불릿 등 작은 이미지에 주로 사용. 투명한 배경이나 움직이는 이미지를 만들 수 있다.
+        
+        JPG/JPEG : 사진을 위해 개발된 형식
+        GIF보다 다양한 색상, 명암 표현 가능. 저장을 반복하다보면 화질이 떨어짐
+    
+        PNG : 투명한 배경을 만들 수 있고 다양한 색상 표현 
+        네트워크용으로 개발되어 최근 많이 사용.
+    -->
+
+    <img src = "../images/character.jpg" alt = "귀여운 캐릭터들">
+    <img src = "../images/penguin.gif" alt = "움직이는 펭귄" width = "200px" height="200px">
+    <img src ="../images/뽀로로.jpg" alt = "평화" width = "200px" height="300px">
+    
+    <h3>ul : unordered list (목차가 없는 리스트)</h3>
+    <ul> 프론트 엔드: 사용자에게 보여지는 부분
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ul>
+
+    <h3>ol : ordered list (목차가 있는 리스트)</h3>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <mark>리코타치즈 만들기</mark>ㅠ
+    <p><b>재료: </b> 우유 ,생크림, 소금, 레몬즙</p>
+
+    <h2>치코타 치즈 샐러드 만들기</h2>
+    <ol type = "a">
+        <li>위에서 만든 리코타치즈를 이용해서</li>
+        <li> 샐러드를 만들어봅니다. 
+        <dt>시판용 소스</dt>
+        <dd>다양한 시판용 소스가 있다.</dd>
+    </dl>
+
+    
+
+
+    
+</body>
+</html>

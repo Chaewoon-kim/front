@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>점심 메뉴 선택하기</title>
+    <style>
+        h3{
+            color:darkred;
+            text-align: center;
+        }
+        hr{
+            border: 3px solid grey;
+        }
+        p{
+            font-size: 18px;
+            font-weight: bold;
+            margin-left:20px;
+        }
+        div{
+            border: 1px solid grey;
+            background-color: linen;
+        }
+        hr{
+            border: 1px solid black;
+        }
+    
+    </style>
+</head>
+<body>
+    <h3>점심 메뉴 선택하기</h3>
+    <hr>
+    <form>
+        <div>
+            <p>일식</p>
+            <hr>
+            <label for="food1"><input type="radio" id = "food1" name ="japan" value ="1">초밥  </label><img src="../images/sushi.jpg" alt="초밥">
+            <label for="food2"><input type="radio" id = "food2" name ="japan" value ="2" checked>라멘  </label><img src="../images/noodle.jpg" alt="라멘">
+            <label for="food3"><input type="radio" id = "food3" name ="japan" value ="3">소바  </label><img src="../images/소바.jpg" alt="소바">
+            <label for="food4"><input type="radio" id = "food4" name ="japan" value ="3">우동  </label><img src="../images/우동.jpg" alt="우동">
+        </div>
+        <div>
+            <p>중식</p>
+            <hr>
+            <label for="food5"><input type="radio" id = "food5" name ="china" value ="4" checked>훠궈 </label><img src="../images/huoguo.jpg" alt="훠궈">
+            <label for="food6"><input type="radio" id = "food6" name ="china" value ="5">마파두부  </label><img src="../images/tofu.jpg" alt="마파두부">
+        </div>
+    </form>
+</body>
+</html>

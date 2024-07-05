@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown01</title>
+    <style>
+        .dropdown-content{
+            display: none;/*none -> 해당 컨텐츠가 가려져서 보이지 않음*/
+
+        }
+        .dropbtn:hover .dropdown-content/*dropbtn 클래스에 hover속성을 넣었을 때 자식 클래스 효과*/{
+            display: block;
+        }
+        .dropdown-content li a{
+            text-decoration: none;
+            color:lightslategray;
+            font-size: 13px;
+        }
+        .dropbtn{
+            cursor: pointer;
+            background-color: aliceblue ;
+            width:100px;
+            font-weight: bold;
+            font-size:15px;
+        }
+        ul{
+           list-style: none;
+           text-align: center;
+           padding-left: 0;
+        }
+        
+        
+    </style>
+</head>
+
+<body>
+    <ul class="dropbtn">드롭다운
+        <div class="dropdown-content"> <!--드롭다운에 커서를 올렸을 때 한번에 보여주기 위해-->
+            <li><a href="#">서브메뉴1</a></li>
+            <li><a href="#">서브메뉴2</a></li>
+            <li><a href="#">서브메뉴3</a></li>
+        </div>
+    </ul>
+</body>
+
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 3차원 회전하기</title>
+    <style>
+        .origin {
+            perspective: 200px;/*3차원 회전을 할 때는 부모 요소에 perspective 속성 O*/
+            border: 1px solid;
+            width: 300px;
+            height:200px;
+            margin:50px;
+        }
+        .rotateX {
+            transform: rotateX(45deg);
+        }
+        .rotateY{
+            transform: rotateY(45deg);
+        }
+        .rotateZ{
+            transform: rotateZ(45deg);
+        }
+        .rotateXYZ{
+            transform: rotate3d(2.5,-1.2,1.5,45deg);/*x,y,z축으로 -1.5만큼의 방향 벡터로 45도 회전*/
+        }
+    </style>
+</head>
+
+<body>
+    <h2>이미지 3차원 회전하기</h2>
+    <div class="origin">
+        <div class="rotateX"><img src="../images/youtube.png" alt="" width="200px"></div>
+    </div>
+    <div class="origin">
+        <div class="rotateY"><img src="../images/youtube.png" alt="" width="200px"></div>
+    </div>
+    <div class="origin">
+        <div class="rotateZ"><img src="../images/youtube.png" alt="" width="200px"></div>
+    </div>
+    <div class="origin">
+        <div class="rotateXYZ"><img src="../images/youtube.png" alt="" width="200px"></div>
+    </div>
+</body>
+
+</html>

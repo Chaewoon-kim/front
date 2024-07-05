@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>백그라운드 학습</title>
+    <style>
+        body{
+            margin: 0; /*margin과 padding 제거*/
+            padding: 0;
+        }
+        section{
+            width: 400px;
+            height: 400px;
+            border: 1px solid black;    
+            background-image: url(../images/background.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: bottom;
+
+            /*background-size: cover -> 배경이미지가 잘리더라고 채움
+              background-size: contain -> 비율을 유지하면서 영역안에 가득 채우기
+              background-repeat: no-repeat -> 배경 이미지를 반복하지 않는다
+              background-repeat: repeat-x -> 이미지를 x축으로만 반복
+              background-repeat: repeat-y -> 이미지를 y축으로만 반복
+              backgorund-position: top,bottom,center,....-> 해당 방향에 사진 위치 지정, px이나 %로도 설정 가능 */
+        }
+    </style>
+</head>
+<body>
+    <section></section>
+</body>
+</html>

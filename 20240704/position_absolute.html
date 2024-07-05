@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Absoulte Page</title>
+    <style>
+        div{
+            width:300px;
+            height: 200px;
+        }
+        .box1{
+            background-color: olivedrab;
+            position: absolute;
+            left:50px;
+            top:80px;
+        }
+        .box2{
+            background-color: cornflowerblue;
+            position:absolute;
+            right:200px;
+            top:100px;
+        }
+        .box3{
+            background-color: burlywood;
+            position:absolute;/*절대적인 자리 차지: 화면 좌측 상단을(0,0) 기준으로 두고 left right top bottom으로 위치 조정 가능*/
+            bottom:200px;
+            left:150px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+</body>
+</html>

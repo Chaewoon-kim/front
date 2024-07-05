@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>border 테두리 관련 속성 페이지</title>
+    <style>
+        div{
+            border: 1px solid seagreen;
+            width: 300px;
+            height: 150px;
+        }
+        .box1{
+            border-width: 2px; /*굵기를 하나만 썼을 시에는 -> 네 방향 모두 같은 굵기*/
+            border-color: blue; /*색상 덮어 씌움*/
+            border-style: solid; /*실선(테두리 스타일)*/
+        }
+        .box2{
+            border-width: thick thin; /*굵기를 2가지를 썼을 시에는 -> [상하] [좌우]*/
+            border-color:chocolate;
+            border-style:dotted;/* 점선 */
+        }
+        .box3{
+            border-width: 5px 10px 1px; /*굵기를 3가지를 썼을 시에는 -> [위] [좌우] [아래]*/
+            border-color:cadetblue;
+        }
+        .box4{
+            border-width: 10px 6px 7px 2px;/*굵기를 4가지를 썼을 시에는 시계 방향으로 설정*/
+            border-style: outset;
+            border-left-color: antiquewhite;
+            border-top-color: brown;
+        }
+        .round1{
+            width: 300px;
+            height: 200px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 30px;
+            border-bottom-left-radius: 70px;
+            border-bottom-right-radius: 50px;
+        }
+        .round2{
+            width:150px;
+            height: 150px;
+            background-color: blanchedalmond;
+            border-radius: 50%;
+        }
+        .round3{
+            width:150px;
+            height: 150px;
+            background-color:darkolivegreen;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class = "box1">박스1</div>
+    <div class = "box2">박스2</div>
+    <div class = "box3">박스3</div>
+    <div class = "box4">박스4</div>
+    <!--round스타일-->
+    <div class = "round1">첫번째 </div>
+    <div class = "round2">두번째</div>
+    <div class = "round3">세번째</div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*헤더 부분 시작*/
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+a {
+    padding: 5px 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: gray;
+    font-weight: 600px;
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav a:hover {
+    color: #01addd;
+    background-color: rgba(255, 255, 255, 0.57);
+}
+
+.logo img {
+    width: 60px;
+    height: 40px;
+}
+
+/*메인 부분 시작*/
+main {
+    height: 600px;
+    background-image: url(../images/coffee1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ment {
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(211, 211, 211, 0.836);
+    position: relative;
+    top: 295px;
+    left: 45px;
+}
+
+h2 {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.644);
+    position: relative;
+    top: 295px;
+    left: 50px;
+}
+
+button {
+    position: relative;
+    top: 300px;
+    left: 50px;
+    background-color: #01a1dd;
+    cursor: pointer;
+    padding: 5px 20px;
+    color: whitesmoke;
+    border: 0;
+    font-weight: 900px;
+}
+
+footer {
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600px;
+    font-size: 14px;
+    /*아이콘과 같이 조절*/
+    padding: 10px 50px;
+    letter-spacing: 1.5px;
+}

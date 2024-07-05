@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown02</title>
+    <style>
+        .dropbtn {
+            display: flex;
+            width: 400px;
+            background-color: aliceblue;
+            text-align: center;
+        }
+
+        .btn1, .btn2,.btn3 {
+            display: none;
+        }
+
+        .head1,
+        .head2,
+        .head3 {
+            font-weight: bold;
+        }
+
+        .head1:hover .btn1 {
+            display: block;
+        }
+
+        .head2:hover .btn2 {
+            display: block;
+        }
+
+        .head3:hover .btn3 {
+            display: block;
+        }
+
+        .btn1 li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .btn1 li a {
+            text-decoration: none;
+            color: black;
+            font-size: 14px;
+            font-weight: normal;
+            text-align: center;
+        }
+
+        .btn2 li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .btn2 li a {
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+            font-weight: normal;
+            color: black;
+        }
+
+        .btn3 li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .btn3 li a {
+            text-decoration: none;
+            text-align: center;
+            font-size: 14px;
+            font-weight: normal;
+            color: black;
+        }
+
+        li:hover a {
+            cursor: pointer;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="dropbtn">
+        <ul class="head1">드롭다운1
+            <div class="btn1">
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+        <ul class="head2">드롭다운2
+            <div class="btn2">
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+        <ul class="head3">드롭다운3
+            <div class="btn3">
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+    </div>
+</body>
+</html>

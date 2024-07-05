@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elvis Presley</title>
+    <style>
+        body{
+            background-color: linen;
+            color:green;
+            margin-left: 40px; 
+            margin-right: 40px;
+        }
+        h3{
+            text-align: center; 
+            color : darkred;
+        }
+        hr{
+            height: 5px; 
+            border: solid grey;
+            background-color: grey;
+        }
+        span{
+            color: blue; 
+            font-size: 20px;
+        }
+        
+    </style>
+    <script>
+        function show(){
+            document.getElementById("fig").src="../images/penguin.gif"; 
+            // document.getElementById("해당ID").src= "파일경로", 
+            // 텍스트 위에 마우스를 올리면 그림 나타남.
+        }
+        function hide(){
+            document.getElementById("fig").src="";
+            //hide함수. 텍스트에서 마우스를 떼면 그림이 사라짐. 형식은 show 함수와 동일.
+        }
+    </script>
+</head>
+<body>
+    <h3 onmouseover="show()" onmouseout="hide()">Elvis Presely</h3><!--텍스트에 마우스를 올리면 show함수 호출-->
+    <hr>
+    <!--div는 자동 줄바꿈 : 블록요소-->
+    <div><img src="" id = "fig"></div>
+        He was an American singer and actor. 
+        In November 1956, he made his film 
+        debut <span>in Love Me Tender</span>.
+        He is often referred to as 
+        "<span>The King of Rock and Roll</span>."
+</body>
+</html>

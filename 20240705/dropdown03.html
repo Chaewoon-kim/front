@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DropDown03</title>
+    <style>
+        .dropbtn {
+            display: flex;
+            justify-content: center;
+            width:50%;
+            background-color: aliceblue;
+            cursor: pointer;
+        }
+        .head {
+            list-style: none;
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 22px;
+        }
+        .btn li a{  
+            display: none;
+            text-decoration: none;
+            color:rgba(165, 42, 42, 0.69);
+            font-weight: normal;
+            font-size: 18px;
+        }
+        .dropbtn:hover .btn li a {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dropbtn">
+        <ul class="head">드롭다운1
+            <div class="btn">
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+
+        <ul class="head">드롭다운2
+            <div class="btn">
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+
+
+        <ul class="head">드롭다운3
+            <div class="btn">
+                <li><a href="#">서브메뉴1</a></li>
+                <li><a href="#">서브메뉴2</a></li>
+                <li><a href="#">서브메뉴3</a></li>
+            </div>
+        </ul>
+
+
+    </div>
+
+</body>
+
+</html>
