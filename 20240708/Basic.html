@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트 기초 변수</title>
+</head>
+<body>
+    <script>
+        //*variable 변수 
+        //1. String 문자열 (따옴표 사용)
+        var a  = "javascript"; //var 대신 let도 가능
+        var num = "100";
+        var tag = "<h1>String<h1>";
+        //콘솔 창에서 확인하기 위한 함수  console.log()
+        console.log(a);
+        console.log(num);
+        console.log(tag);
+        console.log(typeof(a));
+        
+
+        //document함수 -> 콘솔 창이 아니라 실제 화면에 나타내줌 document.write()
+        document.write(a);
+        document.write(num);
+        document.write(tag); //h1 태그 인식 가능
+
+        
+        
+        //2. 변수 숫자형 number
+        var s  = 100;
+        var t  = Number("500"); //String을 Number로 형변환 
+        console.log(s);
+        console.log(t);
+        console.log(typeof(t)); //typeof() -> 해당 변수의 type이 뭔지 알려줌
+        console.log(typeof(s));
+
+        var y = true;
+        var t = 10 >= 1000; //false
+        var k = Boolean("hello");
+        console.log(y);
+        console.log(t); //false
+        console.log(k);
+
+        var m = Boolean(0);
+        var n = Boolean(15);
+        console.log(m); //false
+        console.log(n);
+
+        //null과 undefined데이터
+        //undefined 자료가 정의(할당)되지 않았을 때 데이터 상태
+        //null 데이터 값이 유효하지 않은 상태(값이 비어있다.)
+        // 0은 null이 아님
+
+        //typeof: 어떤 자료형인지 알고 싶을 때
+        var num = 100;
+        var str = "자바스크립트";
+        console.log(typeof(num)); //콘솔 창에 number출력
+        console.log(typeof (str)); //콘솔 창에 String 출력
+        document.write(typeof num, "<br>"); //nummber 출력 후 줄 바꿈 
+        document.write(typeof str, "<br><br><br>"); //string 출력 후 줄 바꿈
+    </script>
+
+    <h3>링크 href에 자바스크립트 작성</h3>
+    <hr>
+    <!--href 코드에 자바스크립트 코드 작성해보기-->
+    <a href="javascript:alert('클릭하셨어요?')">클릭해보세요</a>
+    <script>
+        document.write("<h3> Welcome! </h3>");
+        document.write("2+5는 <br>");
+        document.write("<mark>7입니다</mark>");
+    </script>
+</body>
+</html>
