@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리 페이지</title>
+    <!--창이 넓혀졌을 때와 줄어들었을 때 배경 차이-->
+    <style>
+        body {
+            background-color: bisque;
+            /*기본 PC 모니터 사이즈일 때.*/
+        }
+
+        @media screen and (max-width:768px) {
+
+            /*max-width(768px:테블릿)이하일 때 배경 색깔이 변함.*/
+            body {
+                background-color: burlywood;
+            }
+        }
+
+        @media screen and (max-width:320px) {
+
+            /*max-width(320px:모바일) 이하일 때 배경 색깔이 한 번 더 변함.*/
+            body {
+                background-color: olivedrab;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+
+</html>

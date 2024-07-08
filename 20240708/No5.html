@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex 페이지5</title>
+    <style>
+        section{
+            width: 400px;
+            height: 150px;
+            background-color: lightblue;
+            display: flex;
+        }
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: cadetblue;
+            
+        }
+        .box2{
+            border: 2px solid red;
+            align-self: flex-end; /*해당 박스 하나만 부모 기준에서 아래쪽으로 위치 시키겠다.*/
+            /*align-self: 개별적인 콘텐츠 아이템의 정렬*/
+        }
+        .box3{
+            border: 2px solid black ;
+            margin-left: 160px; /*부모 요소 (section) 을 기준으로 왼쪽 여백을 160px 만큼 떨어진 곳에 위치*/
+        }
+    </style>
+</head>
+<body>
+    <section>
+        div1
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </section>
+</body>
+</html>
