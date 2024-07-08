@@ -34,6 +34,7 @@
         console.log(typeof(t)); //typeof() -> 해당 변수의 type이 뭔지 알려줌
         console.log(typeof(s));
 
+        //3. 논리형(Boolean)
         var y = true;
         var t = 10 >= 1000; //false
         var k = Boolean("hello");
@@ -51,13 +52,74 @@
         //null 데이터 값이 유효하지 않은 상태(값이 비어있다.)
         // 0은 null이 아님
 
-        //typeof: 어떤 자료형인지 알고 싶을 때
+        //4.typeof: 어떤 자료형인지 알고 싶을 때
         var num = 100;
         var str = "자바스크립트";
         console.log(typeof(num)); //콘솔 창에 number출력
         console.log(typeof (str)); //콘솔 창에 String 출력
         document.write(typeof num, "<br>"); //nummber 출력 후 줄 바꿈 
         document.write(typeof str, "<br><br><br>"); //string 출력 후 줄 바꿈
+
+        //-> console은 콘솔창에, document는 문서(화면)에. 
+
+        //5. 사칙연산
+        var num1= 15;
+        var num2 = 2;
+        var result = num1 + num2;
+        document.write(result, "<br>");
+
+        result = num1 - num2;
+        document.write(result,"<br>");
+
+        result = num1 * num2;
+        document.write(result,"<br>"); //30
+
+        result = num1 / num2;
+        document.write(result,"<br>");
+
+        result = num1 % num2;
+        document.write(result,"<br>"); //1 나머지 연산자
+
+
+        //6.문자 결합 연산자
+        var s1 = "동해물과";
+        var s2 = "백두산이";
+        var s3 = 1234;
+        var s4 = "마르고 닳도록";
+
+        var result = s1 + s2 + s3 + s4;
+        document.write(result,"<br>");
+
+        //7.복합 연산자 산술 + 대입
+        //연산된 데이터를 변수에 저장 
+        var num1 = 10;
+        var num2 = 3;
+        num1 += num2; //num1 = num1 + num2;
+        document.write(num1,"<br>"); //13
+
+        num1 -= num2; //num1 = num1 - num2;
+        document.write(num1,"<br>"); //10
+
+        num1 *= num2;
+        document.write(num1,"<br>"); //30
+
+        num1 %= num2;
+        document.write(num1,"<br>");//0
+
+        //복합연산자 표 만들기
+        var str = "<table border = '1'>";
+            str += "<tr>";
+            str += "<td>1</td>";
+            str += "<td>2</td>";
+            str += "<td>3</td></tr>";
+            document.write(str);
+
+        //비교연산자 
+        var ko = 10, mo = "10";
+        
+        ko === 10; // === 자료형까지 일치하는지 확인 
+        mo === 10; // false
+
     </script>
 
     <h3>링크 href에 자바스크립트 작성</h3>
@@ -65,9 +127,9 @@
     <!--href 코드에 자바스크립트 코드 작성해보기-->
     <a href="javascript:alert('클릭하셨어요?')">클릭해보세요</a>
     <script>
-        document.write("<h3> Welcome! </h3>");
-        document.write("2+5는 <br>");
-        document.write("<mark>7입니다</mark>");
+        document.write("<h3> Welcome! </h3>"); //실제 홈페이지에 h3태그 적용
+        document.write("2+5는 <br>"); // 문자열 출력 후 줄바꿈
+        document.write("<mark>7입니다</mark>"); //문자열에 하이라이트 효과 적용 
     </script>
 </body>
 </html>
