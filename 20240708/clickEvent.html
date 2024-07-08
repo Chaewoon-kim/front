@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clickEvent 페이지</title>
+    <style>
+        li{
+            display: inline;
+            border: 2px dashed gray;
+            padding: 0 20px;
+        }
+        a{
+            text-decoration: none;
+            font-size: 20px;
+            color:black;
+        }
+        #result{
+            border: 1px solid;
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            position: relative;
+            left: 80px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+            <li><a href="#" onclick="changeBg('green')">Green</a></li><!--changeBg() : changeBackground-->
+            <li><a href="#" onclick="changeBg('orange')">Orange</a></li>
+            <li><a href="#" onclick="changeBg('lightblue')">LightBlue</a></li>
+            <li><a href="#" onclick= "changeBg('lightgray')">lightGray</a></li>
+            <!--onclick: 클릭했을 때 발생하는 이벤트. 클릭했을 때 ""안에 있는 함수가 실행된다.-->
+    </ul>
+
+    <!--결과 창-->
+    <div id="result"></div>
+
+    <script>
+        //함수 선언 부분 , 매개변수 
+        function changeBg(color){
+            let result = document.querySelector('#result'); //변수에 id = reuslt를 선언 
+            result.style.backgroundColor = color;
+        }
+        //changeBg()함수에 color를 매개변수로 받음. 
+        // quearySelector() -> 괄호 속에 제공한 선택자와 일치하는 문서 내 [첫번 째] 요소를 반환.
+        // result.style.backgroundColor = color ; -> 매개변수 color를 style의 배경색으로 넣어줌
+    </script>
+</body>
+</html>
