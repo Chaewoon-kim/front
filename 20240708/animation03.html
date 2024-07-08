@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animaiton 예제03</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            ;
+        }
+
+        section {
+            border: dashed;
+        }
+
+        ul {
+            overflow: hidden;
+            /*size를 넘어서는 부분들을 가려주는 속성*/
+            animation: slideAni 8s infinite ease-in-out ;
+            width: 4000px;
+            height: 500px;
+            position: relative;
+        }
+
+        @keyframes slideAni {
+            0% {
+                left: 0;
+            }
+
+            25% {
+                left: -1000px;
+            }
+
+            50% {
+                left: -2000px;
+            }
+
+            75% {
+                left: -3000px;
+            }
+
+            100% {
+                left: -4000px;
+            }
+        }
+
+        li {
+            width: 1000px;
+            height: 500px;
+            float: left;
+        }
+
+        /* : nth-child(n) -> 아이디가 부여되지 않은 상태에서 다른 속성값을 주고 싶을 때 그 속성의 1~n번째까지의 child로 아이디 부여 가능 */
+        li:nth-child(1) {
+            background: url(../images/background1.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        li:nth-child(2) {
+            background: url(../images/background2.jpg) no-repeat;
+            background-size: cover;
+
+        }
+
+        li:nth-child(3) {
+            background: url(../images/background3.jpg) no-repeat;
+            background-size: cover;
+        }
+
+        li:nth-child(4) {
+            background: url(../images/background4.jpg) no-repeat;
+            background-size: cover;
+
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+</body>
+
+</html>
