@@ -1,0 +1,163 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    height: 70px;
+
+}
+
+.logo img {
+    width: 70px;
+    height: 70px;
+}
+
+nav {
+    display: flex;
+    height: 100px;
+    width: 60px;
+
+
+}
+
+.cafes {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding-bottom: 50px;
+}
+
+.cafes ul {
+    list-style: none;
+}
+
+.cafes ul li {
+    display: none;
+}
+
+.cafes ul li a {
+    text-decoration: none;
+    color: rgba(165, 42, 42, 0.728);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.cafes ul:hover {
+    cursor: pointer;
+}
+
+.cafes ul:hover li {
+    display: block;
+}
+
+.menu {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 70px;
+    padding-bottom: 50px;
+
+}
+
+.menu ul {
+    list-style: none;
+}
+
+.menu ul li {
+    display: none;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: rgba(165, 42, 42, 0.728);
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.menu ul:hover {
+    cursor: pointer;
+
+
+}
+
+.menu ul:hover li {
+    display: block;
+}
+
+.company {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 70px;
+    padding-bottom: 50px;
+    text-align: center;
+}
+
+.company ul {
+    list-style: none;
+}
+
+.company ul li {
+    display: none;
+}
+
+.company ul li a {
+    text-decoration: none;
+    color: rgba(165, 42, 42, 0.728);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.company ul:hover {
+    cursor: pointer;
+}
+
+.company ul:hover li {
+    display: block;
+}
+
+main {
+    height: 550px;
+    background-image: url(../images/coffee1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ment {
+    font-size: 3em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(211, 211, 211, 0.836);
+    position: relative;
+    top: 295px;
+    left: 45px;
+}
+
+h2 {
+    font-size: 1em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgba(255, 255, 255, 0.644);
+    position: relative;
+    top: 295px;
+    left: 50px;
+}
+
+button {
+    position: relative;
+    top: 300px;
+    left: 50px;
+    background-color: #01a1dd;
+    cursor: pointer;
+    padding: 5px 20px;
+    color: whitesmoke;
+    border: 0;
+    font-weight: 900px;
+}
+
+footer {
+    color: gray;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600px;
+    font-size: 14px;
+    /*아이콘과 같이 조절*/
+    padding: 10px 50px;
+    letter-spacing: 1.5px;
+}
