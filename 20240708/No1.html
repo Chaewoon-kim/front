@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex 페이지</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        section{
+            display: flex;
+            justify-content: space-between; /*창 크기에 맞춰 일정한 간격으로 컨텐츠 정렬*/
+            border: 3px solid black;
+        }
+        div{
+            background-color: green;
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="box1">box1</div>
+        <div class="box2">box2</div>
+        <div class="box3">box3</div>
+    </section>
+</body>
+</html>

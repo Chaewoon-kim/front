@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex 페이지3</title>
+    <style>
+        section{
+            border: 1px solid black;
+            display: flex;
+        }
+        .big-box{
+            width: 200px;
+            height: 200px;
+            background-color: lightgreen;
+            border: 2px solid blue;
+            /*position: relative;*/
+            display: flex;
+            justify-content: center; /*position으로 하는 대신 부모요소에서 [justify-content와 align-items를 동시에 사용]*/
+            align-items: center;
+        }
+        .small-box{
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+            /*position:absolute;
+            left:50px;
+            top:50px;*/
+            
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="big-box"><!--div1-->
+        <div class="small-box">div2</div>
+        </div>
+    </section>
+</body>
+</html>
