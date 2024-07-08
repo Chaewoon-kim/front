@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation 예제1</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        section{
+            background: url(../images/space1.jpg) no-repeat ;
+            background-size:cover;
+            height: 750px;
+            width:100%;
+            position: relative;
+            animation: moveRight 2s ease-out;
+        }
+        .first span{
+            color:white;
+            font-size: 50px;
+            position:absolute;
+            top:52%;
+            right:5%;
+            animation: moveIn 2s ease-out;
+        }
+        .first p{
+            color:white;
+            font-size: 20px;
+            position:absolute;
+            top:60%;
+            right:5%;
+            animation: moveIn 2s ease-out;
+        }
+        pre{
+            color:white;
+            font-size: 20px;
+            position:absolute;
+            top:68%;
+            right: 5%;
+            animation: moveIn 2s ease-out;
+        }
+        @keyframes moveIn{
+            from{
+                right:-10%;
+                opacity: 0;
+            }to{
+                right: 5%;
+                opacity: 0.8;
+            }
+        }
+        @keyframes moveRight{
+            from{
+                left:-10%;
+            }to{
+                left:0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <div class="first">
+            <span>pour un logical CRM,</span><br>
+            <p>
+                simple, complete <br>
+                et intuitive
+            </p>
+        </div>
+        <pre class="second">
+            CRM 소프트웨어를 선택하고,
+            간단하고 완전하며
+            직관적인
+        </pre>
+    </section>
+</body>
+</html>

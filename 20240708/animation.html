@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animation basic</title>
+    <!--transition과 tansfrom 차이.
+    1. transition: 속성의 변화
+    2. transform: translate, skew, rotate, scale: (변신) 애니메이션효과 1회만.-->
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: cadetblue;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            line-height: 200px;
+            margin: 50px auto;      
+            animation: anima 3s alternate infinite ease-in-out/*속력*/; /*anima의 애니메이션을 3초동안 왔다갔다(alternate) 무한반복*/
+            /*
+            애니메이션 이름, 시간 한 줄로 속성값 입력이 권장사항
+            alternate: 갔다가왔다가(돌아오게)
+            infinite: 무한 반복
+            */
+        }
+        /*애니메이션: from{} to{} 형식*/
+        @keyframes anima/*identifier: 애니메이션 식별자*/{
+            from{
+                transform: translate(0,0);
+            }to{
+                transform: translate(400px,300px); /*translate: (x축,y축)*/
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">animation</div>
+</body>
+</html>
