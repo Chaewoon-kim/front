@@ -43,7 +43,7 @@
 <body>
     <h3>Q. 국어 수학 영어 점수를 입력 받아 평균 점수를 나타내세요.</h3> <br>
     <script>
-        let kor = Number(prompt("국어 점수를 입력하세요. "));
+        let kor = Number(prompt("국어 점수를 입력하세요. ")); //자바스크립트는 따로 자료형이 없기 때문에 형변환을 반드시 해줘야 한다. 
         let eng = Number(prompt("영어 점수를 입력하세요. "));
         let math = Number(prompt("수학 점수를 입력하세요. "));
 
@@ -51,15 +51,15 @@
         var avg = Number((sum) / 3);
         document.write("<h1>세 과목의 평균은 " + avg + "점 입니다.</h1>");
 
-        if (avg >= 90) {
+        if (avg >= 90) { //90~100
             document.write("<h2>평균 성적은 A입니다.</h2>");
-        } else if (80 <= avg && avg < 90) {
+        } else if (80 <= avg && avg < 90) { //80~89
             document.write("<h2>평균 성적은 B입니다.</h2>");
-        } else if (70 <= avg && avg < 80) {
+        } else if (70 <= avg && avg < 80) { //70~79
             document.write("<h2>평균 성적은 C입니다.</h2>");
-        } else if (60 <= avg && avg < 70) {
+        } else if (60 <= avg && avg < 70) { //60~69
             document.write("<h2>평균 성적은 D입니다.</h2>");
-        } else {
+        } else { //0~59
             document.write("<h2>평균 성적은 F입니다.</h2>")
         }
     </script>
