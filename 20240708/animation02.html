@@ -41,20 +41,26 @@
             right: 5%;
             animation: moveIn 2s ease-out;
         }
-        @keyframes moveIn{
+        @keyframes moveIn{ /*글자들을 오른쪽에서 왼쪽으로 이동할 수 있게 애니메이션 효과를 만듦*/
             from{
                 right:-10%;
-                opacity: 0;
+                opacity: 0;/*opacity: 투명도*/
             }to{
                 right: 5%;
                 opacity: 0.8;
             }
         }
-        @keyframes moveRight{
+        @keyframes moveRight{ /*배경 이미지를 좌측에서 우측으로 이동할 수 있게 애니메이션 효과를 만들었음*/
             from{
                 left:-10%;
             }to{
                 left:0;
+            }
+        }
+        /*스크린이 768px 이하일 때 글자들이 보이지 않게 함.*/
+        @media screen and (max-width:768px){
+            span,p,pre{
+                display:none;
             }
         }
     </style>
