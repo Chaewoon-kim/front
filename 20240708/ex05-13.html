@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>245쪽 예제</title>
+    <!--꽝 글자에 마우스를 올리면 5초에 걸쳐 현재 글자 크기에서 500% 크기로 확대가 일어나게 해라.-->
+    <style>
+        span{
+            transition: font-size 5s;/*span font-size에서 5초 동안*/
+        }
+        span:hover{
+            font-size: 500%;/*span 태그에 마우스를 올렸을때 font-size가 5초 동안 500% 크기로 커짐*/
+        }
+    </style>
+</head>
+<body>
+    <h3>font-size에 대한 전환</h3>
+    <hr>
+    <p><span>꽝!</span>글자에 마우스를 올려보세요.</p>
+</body>
+</html>
