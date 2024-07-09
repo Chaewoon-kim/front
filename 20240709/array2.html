@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array 활용</title>
+    
+</head>
+<body>
+    <div id="theBody">
+        글자 배경색 바꾸기
+    </div>
+    <button onclick="chColor()">랜덤 버튼</button>
+    <script>
+        function chColor(){
+            let arrayColor = ["red","orange","yellow","green","blue","purple","gray"];
+            let $bodyTag = document.getElementById("theBody");
+            let arrNum = Math.floor(Math.random() * arrayColor.length) ; //Math.random()함수를 통해 랜덤한 숫자들을 반환하여 배경색을 랜덤하게 바꿔줌.
+            //Math.floor() : 소수점을 버림
+            //Math.random() : 랜덤한 숫자를 반환, 0.0 ~ 1의 소수점 포함.
+            //배열이름.length -> 배열의 길이.
+            $bodyTag.style.backgroundColor = arrayColor[arrNum];
+        }
+    </script>
+</body>
+</html>
