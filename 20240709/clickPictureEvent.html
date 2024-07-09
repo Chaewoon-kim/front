@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Pic Event</title>
+    <style>
+        input{
+            background-color: aliceblue;
+            width: 150px;
+            height: 50px;
+            font-weight: bold;
+            border: 3px dotted palevioletred;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+    
+    </style>
+</head>
+<body>
+    <div id="item">
+        <img src="../images/background.jpg" alt="배경화면" width="400">
+    </div>
+        <input type="button" value="상세설명보기"id ="open" onclick="showDetail()"><!--<button>상세설명보기</button>-->
+        <div id="desc">
+            <h4>어느 유럽 도시의 배경</h4>
+            <p>사진에 대한 내용
+                어느 도시인지는 모르겠으나 노을이 지고 있는 것으로 봐선 저녁 시간대로 넘어가는 것 같다.
+                밑을 자세히 보면 물이 있어 반사 효과를 띄고 있다.</p>
+            <input type="button" value="상세설명닫기" id="close" onclick ="hideDetail()">
+        </div>
+    
+    <script>
+        //1. 상세 설명 표시해주는 함수
+        function showDetail(){
+            document.querySelector('#desc').style.display ="block";
+            document.querySelector('#open').style.display="none";
+        }
+        //2. 상세 설명 화면에서 감춘 함수 
+        function hideDetail(){
+            document.querySelector('#desc').style.display = "none";
+            document.querySelector('#open').style.display="block";
+        }
+    </script>
+</body>
+</html>

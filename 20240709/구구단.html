@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단 만들어보기</title>
+    <script>
+        function math(n) {
+            let num = parseInt(n)
+            for (let j = 1; j <= 9; j++) {
+                sum = num * j;
+                document.write(num + "x" + j + "=" + sum + "<br>");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>구구단 출력하기</h1>
+    <hr>
+    <script>
+        let n = prompt("원하는 구구단을 입력하세요.");
+        math(n);
+    </script>
+
+</body>
+
+</html>
