@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <script>
+        //for문으로 1부터 5까지 더하기 
+        let sum = 0;
+        for (let i = 0; i <= 5; i++) {
+            sum += i;
+        }
+        document.write("1부터 5까지의 합은 " + sum + "입니다.<br>");
+
+
+        //for문을 이용해 1000까지 더하기
+        let sum1 = 0;
+        for (let i = 0; i <= 1000; i++) {
+            sum1 += i;
+        }
+        document.write("1부터 1000까지의 합은 " + sum1 + "입니다.<br>");
+
+        //Hello World! 5번 반복하기
+        let sum2 = "Hello World!";
+        for (let i = 0; i < 5; i++) {
+            document.writeln(sum2);
+        }
+        document.write("<br>");
+
+        //짝수 더하기 (1~10)
+        let sum3 = 0;
+        for (let i = 0; i <= 10; i += 2) {
+            sum3 += i;
+        }
+        document.write("1부터 10까지 숫자 중 짝수의 합은 " + sum3 + "입니다.<br>");
+
+        //짝수 더하기2 (for문 +if 문을 사용해서 출력)
+        let sumEven = 0;
+        for (let i = 0; i <= 10; i++) {
+            if (i % 2 === 0) {
+                sumEven += i;
+                document.write(i + "-------------" + sumEven + "<br>");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
