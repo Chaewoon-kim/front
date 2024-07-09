@@ -10,21 +10,23 @@
 <body>
     <p>3의 배수인지 확인</p>
     <script>
-        let userNumber = prompt("숫자를 입력하세요.");
-        /*if(userNumber !== null){
+        let userNumber = Number(prompt("숫자를 입력하세요."));
+        if(userNumber !== null && userNumber !== 0){
             if(userNumber % 3 === 0){
                 alert("3의 배수입니다.");
             }else{
                 alert("3의 배수가 아닙니다.");
             }
-        }*/
+        }else if(userNumber === 0){
+            alert("다시 입력해주세요. 입력값이 잘못 되었습니다.");
+        }
 
         //삼항 연산자 if(조건식 ? 참 : 거짓);
-        if (userNumber !== null) {
+        /*if (userNumber !== null) {
             (userNumber % 3 === 0) ? alert("3의 배수입니다.") : alert("3의 배수가 아닙니다.");
         } else {
             alert("입력이 취소됐습니다.");
-        }
+        }*/
     </script>
 </body>
 

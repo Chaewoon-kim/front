@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex06-6</title>
+</head>
+
+<body>
+    <h1>변수 선언, 전역/지역/블록 변수</h1>
+    <hr>
+    <script>
+        let x; //여기서 x는 전역변수.
+        function f(){
+            let y; //여기서 y는 지역변수
+            x = 10; 
+            y = 20;
+            z = 30;
+            if(y == 20){
+                let b = 40; // 여기서 b는 블록 변수 if 블록에서만 사용 가능
+                b++;
+                document.write("if 내 블록 변수 b = " + b + "<br>"); // b -> 41
+            }
+            //if블록 종료 -> 블록 변수 b 접근 불가
+            //반면 x,y,z 에는 모두 접근 가능
+            document.write("함수 f() 내 지역변수: y = " + y + "<br>"); //y  = 20
+        }
+        f(); //f함수 호출
+        document.write("전역변수 x = " + x + "<br>");
+        document.write("전역변수 z = " + z);
+        //여기서 x와 z를 제외한 y는 지역변수 이기 때문에 접근 불가
+    </script>
+</body>
+
+</html>
