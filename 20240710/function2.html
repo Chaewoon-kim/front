@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수 정리2</title>
+</head>
+<body>
+    <script>
+        // 비교를 위한 함수 (선언 부분)
+        function sumMulti(x,y){
+            if(x == y){
+                return x * y;
+            }else{
+                return x + y;
+            }
+        }
+
+        //실행 부분 
+        console.log(sumMulti(31,42)); // 두 수가 다르기 때문에 덧셈 반환
+        console.log(sumMulti(10,10)); // 두 수가 같기 때문에 곱셈 반환
+
+        //parseInt() -> 정수로 변환하는 함수
+        //parseFloat() -> 실수로 변환하는 함수
+        let num1 = parseInt(prompt("비교할 첫 번째 숫자: "));
+        let num2 = parseInt(prompt("비교할 두 번째 숫자: "));
+
+        //함수실행
+        compareTwo(num1 , num2);
+
+        //함수 선언
+        function compareTwo(x,y){
+            if(x == y){
+                alert(`${x}와 ${y}는 같다.`);
+            }else if(x > y){
+                alert(`${x}가 ${y}보다 큽니다.`);
+            }else{
+                alert(`${y}가 ${x}보다 큽니다.`);
+            }
+        }
+
+        //호이스팅이란? 
+        //-> 함수 내의 변수 및 함수 선언을 각 유효 범위의 최상단으로 끌어 올려주는 JS의 독특한 특징
+        //-> 다른 언어와 다르게 함수 선언 후 실행 하는 과정이 역순이여도 컴파일 오류 x
+
+        
+    </script>
+</body>
+</html>

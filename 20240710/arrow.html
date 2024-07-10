@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>화살표 함수</title>
+    <style>
+        #box{
+            width: 150px;
+            height: 150px;
+            background-color:aquamarine;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <script>
+        const $box = document.querySelector("#box");
+        //1. 마우스를 올렸을 때.(mouseenter)
+        // addEventListner() -> 어떤 이벤트가 발생했을 때 진행되는 함수 , 책 261쪽
+        $box.addEventListener("mouseenter",() => {
+            $box.style.backgroundColor = "olive";
+        });
+
+
+        //2. 마우스 내렸을 때. (mouseleave)
+        $box.addEventListener("mouseleave",() => {
+            $box.style.backgroundColor = "powderblue"; 
+        })
+
+    </script>
+</body>
+</html>
