@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ModalScreen</title>
+    <style>
+        #modal-contents{
+            width: 600px;
+            height: 400px;
+            border: 2px dashed purple;
+            padding: 50px;
+        }
+        #modal-box{
+            border: 1px solid black;
+            background-color: rgba(169, 169, 169, 0.386);
+            position: fixed;
+            top:0;
+            left:0;
+            right:0;
+            bottom: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            display: none;
+        }
+        #modal-box.active{
+            display: flex;
+        }
+        #open{
+            display: block;
+        }
+        #close{
+            display: none;
+        }
+        #open.active{
+            display: none;
+        }
+        #close.active{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <button id="open">프로필 보기</button>
+    <div id="modal-box">
+        <div id="modal-contents">
+            <span id="title">My Profile</span> <button id="close">닫기 X</button>
+        </div>
+    </div>
+    <script>
+        const open = document.querySelector("#open");
+        const close = document.querySelector("#close");
+        const modalBox = document.querySelector("#modal-box");
+
+        //id = open 을 클릭했을 때 클래스리스트에 active 스타일 추가
+        open.addEventListener("click", () => {
+            modalBox.classList.add("active"); // = display flex;
+        });
+        //id = close를 클릭했을 때 클래스리스트에 acitve 스타일 제거 
+        close.addEventListener("click",() =>{
+            modalBox.classList.remove("active");
+        });
+
+        /*토글로 해보기
+        modalBox.classList.toggle("active");
+        modalBox.classList.toggle("active");*/
+        
+    </script>
+</body>
+</html>

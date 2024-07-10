@@ -11,12 +11,21 @@
             background-color:aquamarine;
             margin: 100px auto;
         }
+       
     </style>
 </head>
 <body>
     <div id="box"></div>
+    <img src="../images/bulb.jpg" id="bulb">
     <script>
+        //이벤트 리스너 261쪽 아래, 393쪽 ~ 
+        //mouseover와 mouseout으로 변경해서 실행 411쪽
+        //*addEventlistener
+        //->add인 이유는 여러 개의 리스너를 중복 등록할 수 있다. 397쪽 전구 해보기.
         const $box = document.querySelector("#box");
+        //이미지 변수 선언 (id로)
+        const $bulb = document.querySelector("#bulb");
+
         //1. 마우스를 올렸을 때.(mouseenter)
         // addEventListner() -> 어떤 이벤트가 발생했을 때 진행되는 함수 , 책 261쪽
         $box.addEventListener("mouseenter",() => {
@@ -28,7 +37,7 @@
         $box.addEventListener("mouseleave",() => {
             $box.style.backgroundColor = "powderblue"; 
         })
-
+        
     </script>
 </body>
 </html>

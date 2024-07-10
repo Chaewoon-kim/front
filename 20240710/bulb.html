@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>전구 이미지에 효과주기</title>
+    <style>
+        div{
+            border: 1px solid black;
+        }
+         img{
+            width:350px;
+            height: 350px;
+        }
+        
+        @keyframes rotate{
+            from{
+                rotate: 0deg;
+            }to{
+                rotate: 360deg;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+    <img src="../images/bulb.jpg" id="bulb">
+    </div>
+    <script>
+        const $bulb = document.querySelector("#bulb");
+        
+        $bulb.addEventListener("mouseenter", () => {
+            $bulb.style.cursor = "pointer";
+            $bulb.style = "box-shadow: 0px 0px 20px yellow";
+            $bulb.style.animation = "rotate 2s infinite";
+        });
+
+        $bulb.addEventListener("mouseleave",() => {
+            $bulb.style = "";
+        });
+    </script>
+</body>
+</html>
