@@ -9,8 +9,14 @@
         #modal-contents {
             width: 600px;
             height: 400px;
-            border: 2px dashed purple;
+            border: 2px dotted black;
+            border-radius: 10px;
             padding: 50px;
+        }
+
+        #modal-contents img {
+            width: 300px;
+            height: 200px;
         }
 
         #modal-box {
@@ -31,12 +37,42 @@
             display: flex;
         }
 
+        span {
+            font-size: 20px;
+            text-decoration: underline;
+        }
+
         #open {
             display: block;
+            border: 3px ridge rgba(165, 42, 42, 0.706);
+            border-radius: 5px;
+            font-size: 15px;
+            padding: 10px;
+        }
+
+        #open:hover {
+            cursor: pointer;
+            color: rgba(255, 0, 0, 0.583);
         }
 
         #close {
             display: none;
+            border: 3px ridge rgba(165, 42, 42, 0.706);
+            border-radius: 5px;
+            font-size: 15px;
+            padding: 10px;
+            margin-left: 530px;
+            margin-top: 380px;
+            position: absolute;
+            /* 절대 위치 지정 */
+            top: 200px;
+            /* 모달 내부에서의 상대적인 위치 조정 */
+            right: 550px;
+        }
+
+        #close:hover {
+            cursor: pointer;
+            color: rgba(255, 0, 0, 0.583);
         }
 
         #open.active {
@@ -50,10 +86,12 @@
 </head>
 
 <body>
-    <button id="open">프로필 보기</button>
+    <h1>모달을 이용해 우리집 강아지 소개하기</h1>
+    <hr>
+    <button id="open">호두 보러 가기</button>
     <div id="modal-box">
         <div id="modal-contents">
-            <span id="title">My Profile</span> <button id="close">닫기 X</button>
+            <span id="title" onclick="newImg()">My Dog's Profile</span> <button id="close">닫기 X</button>
         </div>
     </div>
     <script>
@@ -61,18 +99,21 @@
         const close = document.querySelector("#close");
         const modalBox = document.querySelector("#modal-box");
 
-        //id = open 을 클릭했을 때 클래스리스트에 active 스타일 추가
+
         open.addEventListener("click", () => {
             modalBox.classList.add("active"); // = display flex;
-            close.style.display ="block";
+            close.style.display = "block";
         });
-        //id = close를 클릭했을 때 클래스리스트에 acitve 스타일 제거 
         close.addEventListener("click", () => {
             modalBox.classList.remove("active");
         });
-        /*토글로 해보기
-        modalBox.classList.toggle("active");
-        modalBox.classList.toggle("active");*/
+
+        function newImg() {
+            let p = document.getElementById("title");
+            p.innerHTML = ("<img src = '../images/김호두씨.jpg'>");
+        }
+
+
     </script>
 </body>
 

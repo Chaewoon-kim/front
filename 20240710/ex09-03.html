@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p397 ex09-03</title>
+    <script>
+        function init(){
+            let p = document.getElementById("p");
+            p.addEventListener("mouseover",over); //over()함수 호출
+            p.addEventListener("mouseout",out); //out()함수 호출
+        }
+        function over(){
+            p.style.backgroundColor = "orchid";
+        }
+        function out(){
+            p.style.backgroundColor = "white";
+        }
+    </script>
+</head>
+<body onload="init()">
+    <h1>addEventListener()를 이용한 리스너 등록</h1>
+    <hr>
+    <p id="p">마우스 올리면 orchid 색으로 변경</p>
+</body>
+</html>
