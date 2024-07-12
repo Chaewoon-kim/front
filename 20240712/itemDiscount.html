@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가격 할인하고 출력해보기</title>
+    <style>
+        
+        ul{
+            list-style: none;
+        }
+        li{
+            margin-top: 15px;
+        }
+        button{
+            margin-top: 20px;
+            padding: 10px 10px;
+        }
+        button:hover{
+            border-radius: 5px;
+            cursor: pointer;
+            color:brown;
+        }
+        div{
+            display: flex;
+        }
+        form{
+            margin-left: 5px;
+            background-color:cornsilk;
+            border: 1px solid black;
+            border-radius: 10px;
+            width:350px;
+        }
+        .showRate{
+            margin-top: 30px;
+            
+        }
+        .showResult{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="contents">
+        <img src="../images/keyboard.jpg" alt="">
+        <form>
+            <ul>
+                <li>
+                    <label for="oPrice">상품 가격:
+                    <input type="text" id="oPrice"> 원</label> <!--label로 input과 묶어줌 , 이때 for와 id부분의 내용은 같아야함.-->
+                </li>
+                <li>
+                    <label for="rate">할인율:
+                    <input type="text" id="rate"> %</label>
+                </li>
+                <button onclick="showPrice()">가격 계산하기</button>
+            </ul>
+        </form>
+    </div>
+    
+    <div class="showRate">
+        <!--할인된 금액 출력 부분-->
+    </div>
+
+    <div class="showResult">
+        <!--결과창 출력하는 부분-->
+    </div>
+    <br>
+    
+    <script>
+        //할인된 가격 계산하는 showPrice() 함수 부분
+        function showPrice(){
+            event.preventDefault(); //새로고침 방지 
+            let originPrice = document.getElementById("oPrice").value; //원래 가격
+            // 콘솔창에 document.getElementById("oPrice").value; 입력해보기.
+            // 할인율 입력 받은 값이 얼마인지?
+
+            let priceRate = document.getElementById("rate").value; //할인율
+
+            let discountPrice = originPrice * (priceRate/100); //할인가격
+            let finalPrice = originPrice - discountPrice; //최종 가격
+
+            
+            document.querySelector('.showRate').innerHTML = "--->"+ priceRate + " % 할인 받은 금액은 " + discountPrice + "원 입니다.";
+            document.querySelector('.showResult').innerHTML = "---> 최종 가격은 " + finalPrice + "원 입니다.";
+
+        }
+    </script>
+</body>
+</html>
