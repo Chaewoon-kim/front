@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구성품의 총 가격 구하고 삭제하는 페이지</title>
+    <style>
+        #container{
+            width: 800px;
+            background-color: rgb(254, 244, 231);
+            
+        }   
+        h2{
+            color:brown;
+            border: 2px solid black;
+            border-radius: 5px;
+            text-align: center;
+            background-color:rgb(252, 252, 240);
+            
+        }
+        fieldset{
+            border: 2px solid black;
+        }
+        label:hover{
+            cursor: pointer;
+            color:rgb(198, 5, 5);
+        }
+        fieldset{
+            margin-top: 20px;
+        }
+        button{
+            background-color: white;
+            padding: 2px 10px;
+            border-radius: 5px;
+        }
+        button:hover{
+            cursor:pointer;
+            background-color: rgb(238, 249, 249);
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2> 총 주문 가격 확인 </h2>
+        
+        <form>
+            <fieldset>
+                <legend>기본 가격</legend>
+                <p>30,000원</p>
+            </fieldset>
+            <fieldset>
+                <legend>추가되는 금액</legend>
+                <label ><input type="checkbox" class="checkbx" value="1200">기장 추가(1200원)</label>
+                <label ><input type="checkbox" class="checkbx" value="3000">배송 비용(3000원)</label>
+                <label ><input type="checkbox" class="checkbx" value="800">산간 지역 추가(800원)</label>
+                <label ><input type="checkbox" class="checkbx" value="5000">산간 지역 추가, 제주(5000원)</label>
+            </fieldset>
+            <fieldset>
+                <legend>합계</legend>
+                <input type="text" id="total" name="total" class="price" readonly><!--readonly : 읽기만 가능, 입력 불가-->
+                <button id="purchase">구매하기</button>
+            </fieldset>
+
+        </form>
+    </div>
+    <script>
+        let price = 30000;
+        let sideMenu = document.querySelectorAll(".checkbx"); //querySelectorAll - > [한 번에 같은 아이디를 가지고 있는 클래스들을 선언]하고 싶을 때.
+        let totalPrice = document.getElementById("total");
+
+        //버튼을 클릭했을 때 alert 함수 호출
+        let pucharseButton = document.getElementById("purchase");
+        pucharseButton.addEventListener("click",function(){
+            if(confirm("장바구니에 담으시겠습니까?")){
+                alert("상품이 정상적으로 담겨졌습니다.");
+            }else{
+                document.addEventListener="";
+            }
+        });
+
+        for(let i = 0 ; i < sideMenu.length; i++){ 
+            sideMenu[i].onclick = function(){
+                if(this.checked == true){//만약 checkbox에 check가 되면 가격 합산
+                price += parseInt(this.value); //정수로 변환 합산
+            }else{
+                price -= parseInt(this.value); // check가 풀리면 가격 차감
+            }
+            total.value = price + "원";
+        }
+    }
+    </script>
+</body>
+</html>
