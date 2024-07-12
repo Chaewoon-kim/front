@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>알림 메시지</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+        button{
+            background-color: greenyellow;
+            font-weight: bold;
+            border: 5px dashed green;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            box-shadow: 3px 3px 3px gray;
+        }
+        #note-box {
+            position: absolute; /* 부모 요소를 절대 위치로 설정 */
+            top: 20px;
+            right: 20px;
+            display: flex;
+            flex-direction: column; /* 세로로 쌓이도록 설정 */
+            gap: 10px; /* 알림 사이 간격 추가 */
+        }
+        .note{
+            padding: 10px;
+            margin: 15px;
+            background-color: aliceblue;
+            border-left: 5px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="note-box">
+        <button id="btn">알림 <br> 메세지!</button>
+    </div>
+    <script>
+        const btn =document.querySelector("#btn");
+        const noteBox = document.querySelector("#note-box");
+
+        btn.addEventListener("click",() =>{
+            const note = document.createElement("div"); // 1. html에서 쓰는 것처럼 js에서 요소 생성
+            note.classList.add("note"); //div 안에 class 이름을 note로 하겠다. 
+            note.innerText = "팝업으로 띄울 내용"; //note에 text를 입력.
+            noteBox.appendChild(note); //부모 요소인 div 클래스 noteBox에 자식 요소로 div클래스 note를 넣음. (생성 완료)
+            
+
+            //setTimeout() -> 시간을 고려하는 타이머 함수: 특정 시간 동안 함수 반복
+            setTimeout(() => {
+               note.remove(); //시간이 지나면 note가 지워짐 
+            }, 3000); //지속 시간 : 3초
+        })
+
+        function greeting(){
+            console.log("안녕하세요.");
+        }
+        setInterval(greeting,2000);
+        clearInterval(greeting);
+    </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클릭시 색깔 변화</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            margin: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #4a90e2;
+        }
+        h4 {
+            color: #555;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 5px;
+            transition: background-color 0.3s, font-size 0.3s;
+            background-color: #fff;
+            box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        }
+        li:hover {
+            cursor: pointer;
+            background-color: #e8f0fe;
+        }
+        .check {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h2>클릭해보세요 &check;</h2>
+
+    <h4>할 일 목록</h4>
+    <hr />
+    <ul>
+        <li><span class="check">&check; 점심 맛있는거 먹기</span></li>
+        <li><span class="check">&check; 수업 잘 마치기</span></li>
+        <li><span class="check">&check; 인강 듣기</span></li>
+        <li><span class="check">&check; 여자친구 만나기</span></li>
+        <li><span class="check">&check; 호두랑 놀기</span></li>
+    </ul>
+
+    <script>
+        let listB = document.querySelectorAll(".check");
+
+        for (let i = 0; i < listB.length; i++) {
+            listB[i].addEventListener("click", function () {
+                listB[i].style.color = "hotpink";
+                listB[i].style.textDecoration = "line-through";
+                this.style.backgroundColor = "lightgray";
+                this.style.fontSize = "20px";
+            });
+        }
+        
+    </script>
+</body>
+</html>
+

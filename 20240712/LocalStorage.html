@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>해야 할 일들 기록하기</title>
+    <style>
+      body {
+        background-color: rgba(201, 229, 254, 0.505);
+        display: flex;
+        justify-content: center;
+        height: 600px;
+        align-items: center;
+      }
+      #container {
+        width: 400px;
+        background-color: ghostwhite;
+        border-radius: 5px;
+        box-shadow: -2px 2px 10px 15px rgba(129, 128, 128, 0.501);
+      }
+      #itemList {
+        margin: 0;
+        width: 400px;
+        border-radius: 5px;
+        border: 1px solid maroon;
+      }
+      ol {
+        padding-left: 30px;
+      }
+      #itemList ol li:nth-child(odd) {
+        padding: 5px;
+        text-decoration: underline;
+        background-color: rgba(137, 43, 226, 0.155);
+      }
+      #itemList ol li:nth-child(even) {
+        padding: 5px;
+        text-decoration: underline;
+        background-color: lavender;
+      }
+      h1 {
+        padding-left: 10px;
+        text-align: center;
+        color: rgba(165, 42, 42, 0.701);
+      }
+      p {
+        padding-left: 10px;
+        color: rgb(93, 93, 93);
+      }
+      form {
+        padding-left: 10px;
+      }
+      .addBtn {
+        border: 2px solid black;
+        border-radius: 5px;
+        background-color: rgba(248, 248, 255, 0.141);
+      }
+      .addBtn:hover {
+        cursor: pointer;
+        color: brown;
+      }
+      .close {
+        margin-left: 100px;
+        border-radius: 5px;
+        background-color: rgba(255, 255, 224, 0.495);
+      }
+      .close:hover {
+        cursor: pointer;
+        color: red;
+      }
+      ol {
+        list-style-type: lower-alpha;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>할 일 목록</h1>
+      <p>해야 할 일들 기록하기 &check;</p>
+      <form>
+        <input type="text" id="item" autofocus required />
+        <button id="add" class="addBtn">추가하기</button>
+        <hr />
+      </form>
+      <!--표시할 영역-->
+      <div id="itemList"></div>
+    </div>
+
+    <script>
+      //새로고침 방지
+      const $form = document.querySelector("form");
+      $form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        //console.log(event.target);
+      });
+
+      let itemList = [];
+      let addBtn = document.querySelector("#add");
+      addBtn.addEventListener("click", addList); //클릭하면 addList 함수 실행
+
+      // 1. 추가
+      function addList() {
+        let item = document.querySelector("#item").value; //텍스트 필드 내용(콘솔)
+        console.log(item); //추가 내용 콘솔창 확인
+        if (item != null) {
+          itemList.push(item); //push() -> 배열 맨 뒤에 값 추가.
+          //itemList.unshift(item); //unshift() -> 배열 맨 앞에 값 추가.
+          document.querySelector("#item").value = ""; //입력한 후 텍스트 내용 지우기
+          document.querySelector("#item").focus();
+        }
+
+        localStorage.setItem("storageList", JSON.stringify(itemList));
+        //콘솔이 아닌 화면에 보여주는 함수
+        showList();
+      }
+
+      // 2. 출력
+      function showList() {
+        let list = "<ol> "; //목록 시작 <ul> 태그 저장
+
+        for (let i = 0; i < itemList.length; i++) {
+          //배열의 요소마다 반복
+          list +=
+            "<li>" +
+            itemList[i] +
+            "<button class='close' id = " +
+            ">X</button></li>";
+        }
+        //for문 종료시 ul태그를 닫아줌.(목록이 끝나는부분에 ul 태그 닫아줌)
+        list += "</ol>";
+        //결과창에 보여줌
+        document.querySelector("#itemList").innerHTML = list;
+
+        //삭제 버튼 추가
+        let remove = document.querySelectorAll(".close");
+        for (let i = 0; i < remove.length; i++) {
+          remove[i].addEventListener("click", removeList);
+        }
+      }
+
+      // 3. 로컬스토리지에 저장
+      function getItems() {
+        let storedData = localStorage.getItem("storageList");
+        if (storedData != null) {
+          itemList = JSON.parse(storedData);
+        }
+        showList();
+      }
+      getItems();
+
+      // 4. 제거
+      function removeList() {
+        let id = this.getAttribute("id"); //클릭 id값 가져와 변수에 저장
+        itemList.splice(id, 1); //itemList배열에서 인덱스 값이 id인 요소 하나를 제거
+        showList(); //변경된 부분 화면에 표시
+        localStorage.setItem("storageList", JSON.stringify(itemList));
+      }
+    </script>
+  </body>
+</html>

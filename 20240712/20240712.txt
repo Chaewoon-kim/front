@@ -1,0 +1,25 @@
+* 로컬스토리지 테스트
+        //localStorage.setItem("1" , "첫 번째 값");
+        //localStorage.getItem(1) // 키 이름으로 value를 가지고 온다.
+        //localStorage.clear() // 정보 지움
+        
+
+*localStorage.getItem("storageList")
+-> 로컬스토리지에서 가져오기.
+
+
+* JSON (JavaScript Object Notation)
+-> 자료를 주고받는 방식을 가리키는 말로 '제이슨'이라고 함.
+* JSON.parse() 메서드
+-> 여러 값으로 된 [문자열]을 가져와 [배열 형태]로 변환할 때 사용. 
+
+*JSON으로 변경하는 이유
+let array = [1,2,3];
+localStorage.setItem('name',JSON.stringify(array));
+//로컬 스토리지에서 가져오기
+let todo = localStorage.getItem('name');
+JSON.parse(todo);
+
+
+
+
